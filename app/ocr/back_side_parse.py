@@ -314,25 +314,7 @@ def get_info_back(image):
         ct = list(filter(None, ct))
         cnText.append(ct)
     
-    print(cnText)
-    c_number, gender = get_citizenship_number(cnText)
-    info['Citizenship Number'] = c_number
-    info['Gender'] = gender
-    
-    full_name = get_full_name(cnText)
-    info['Name'] = full_name
-
-    date_of_birth = get_DOB(cnText)
-    info['dob'] = date_of_birth
-
-    birth_place, permanent_adrr = get_address(cnText)
-    info['birth_place'] = birth_place
-    info['permanent address'] = permanent_adrr
-
-    issue_date = get_issue_date(image)
-    info['issue_date'] = issue_date
-    return info
-
+    return cnText
 def rotate_image(image, angle):
     """Image rotation
 
@@ -349,7 +331,7 @@ def rotate_image(image, angle):
     return result
 
 if __name__ == '__main__':
-    image = cv2.imread("../test/back2.jpg", 1)
+    image = cv2.imread("../test/back.jpg", 1)
     image = rotate_image(image, 2)
     print("Information Extracted:", get_info_back(image))
 
