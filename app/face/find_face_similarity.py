@@ -1,11 +1,11 @@
 import numpy as np
+from . import face_model
+
 import cv2
-
 from sklearn.metrics.pairwise import cosine_similarity
-
-import facenet, face_models
-
-model = face_models.LoadRecogModel()
+#from app.face import facenet, face_models
+from . import facenet 
+model = face_model.LoadRecogModel()
 
 image_size = 160
 

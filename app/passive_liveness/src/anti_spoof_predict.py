@@ -59,14 +59,3 @@ class AntiSpoofPredict():
             result = self.model.forward(img)
             result = F.softmax(result).cpu().numpy()
         return result
-
-
-
-
-
-
-
-
-
-
-

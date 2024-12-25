@@ -1,8 +1,8 @@
 import os
 import tensorflow as tf
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '4'
-import facenet
-
+#from . import facenet, face_models
+from . import facenet
 my_absolute_dirpath = os.path.abspath(os.path.dirname(__file__))
 
 class LoadRecogModel():
